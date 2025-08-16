@@ -90,6 +90,7 @@ void reshape(int width, int height) {
 }
 
 int main(int argc, char** argv) {
+    std::cout << "pre main" << endl;
     glutInit(&argc, argv);
     glutInitContextVersion(3, 3);
     glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE); // Ensure compatibility profile
@@ -111,5 +112,6 @@ int main(int argc, char** argv) {
     glutReshapeFunc(reshape);
 
     glutMainLoop();
+    std::cout << "post main" << endl;
     return 0;
 }
